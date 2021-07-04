@@ -1,10 +1,19 @@
 import * as React from 'react';
+import { css } from '@emotion/react';
 
-// markup
+const header = css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 20px;
+  background-color: #222;
+  color: white;
+`;
+
 const IndexPage = () => {
   return (
     <>
-      <header>
+      <header css={header}>
         <h1>タイトルロゴ</h1>
         <nav>
           <ul>
