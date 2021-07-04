@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { css } from '@emotion/react';
+import { Global, css } from '@emotion/react';
+import Layout from '../components/layout';
 
 const header = css`
   display: flex;
@@ -12,7 +13,7 @@ const header = css`
 
 const IndexPage = () => {
   return (
-    <>
+    <Layout>
       <header css={header}>
         <h1>タイトルロゴ</h1>
         <nav>
@@ -29,7 +30,7 @@ const IndexPage = () => {
           </ul>
         </nav>
       </header>
-    </>
+    </Layout>
   );
 };
 
