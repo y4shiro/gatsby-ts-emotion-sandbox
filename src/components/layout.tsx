@@ -1,4 +1,5 @@
 import React from 'react';
+import normalizeCss from 'emotion-normalize';
 import { Global, css } from '@emotion/react';
 
 const globalStyles = css`
@@ -10,7 +11,12 @@ const globalStyles = css`
 const Layout: React.FC = ({ children }) => {
   return (
     <>
-      <Global styles={globalStyles}></Global>
+      <Global
+        styles={css`
+          ${normalizeCss}
+          ${globalStyles}
+        `}
+      ></Global>
       {children}
     </>
   );
