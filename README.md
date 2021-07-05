@@ -52,11 +52,11 @@ String Styles は通常の CSS 記法と同様なので、移植や書き換え�
 
 また、SCSS のような nest 記法が使えるのも魅力的です。
 
-```scss
+```jsx
 /** @jsx jsx */
-import { css, jsx } from '@emotion/react'
+import { css, jsx } from '@emotion/react';
 
-const color = 'darkgreen'
+const color = 'darkgreen';
 
 render(
   <div
@@ -69,27 +69,27 @@ render(
   >
     This has a hotpink background.
   </div>
-)
+);
 ```
 
 nest 記法は Object Styles でも使用できますが、nest するセレクタをセミコロンで囲う必要があったりと記法が直感的でない印象を受けました。
 
-```scss
+```jsx
 /** @jsx jsx */
-import { jsx } from '@emotion/react'
+import { jsx } from '@emotion/react';
 
 render(
   <div
     css={{
       backgroundColor: 'hotpink',
       '&:hover': {
-        color: 'lightgreen'
-      }
+        color: 'lightgreen',
+      },
     }}
   >
     This has a hotpink background.
   </div>
-)
+);
 ```
 
 ### CSS Modules が css-loader で deprecated となっている
