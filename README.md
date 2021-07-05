@@ -53,16 +53,43 @@ String Styles は通常の CSS 記法と同様なので、移植や書き換え�
 また、SCSS のような nest 記法が使えるのも魅力的です。
 
 ```scss
-const footer = css`
-  width: 100%;
-  padding: 30px 0;
-  background-color: #333;
-  text-align: center;
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react'
 
-  .text {
-    color: #eee;
-  }
-`;
+const color = 'darkgreen'
+
+render(
+  <div
+    css={css`
+      background-color: hotpink;
+      &:hover {
+        color: ${color};
+      }
+    `}
+  >
+    This has a hotpink background.
+  </div>
+)
+```
+
+nest 記法は Object Styles でも使用できますが、nest するセレクタをセミコロンで囲う必要があったりと記法が直感的でない印象を受けました。
+
+```scss
+/** @jsx jsx */
+import { jsx } from '@emotion/react'
+
+render(
+  <div
+    css={{
+      backgroundColor: 'hotpink',
+      '&:hover': {
+        color: 'lightgreen'
+      }
+    }}
+  >
+    This has a hotpink background.
+  </div>
+)
 ```
 
 ### CSS Modules が css-loader で deprecated となっている
