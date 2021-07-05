@@ -1,5 +1,6 @@
 import React from 'react';
-import { css } from '@emotion/react';
+
+import content from './styles/content';
 
 const About: React.FC = () => {
   return (
@@ -12,15 +13,5 @@ const About: React.FC = () => {
     </section>
   );
 };
-
-const content = css`
-  max-width: 960px;
-  width: 80vw;
-  margin: 0 auto 80px;
-
-  .title {
-    text-align: center;
-  }
-`;
 
 export default About;
