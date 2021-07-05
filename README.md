@@ -28,7 +28,8 @@ TS の型定義に関しては、CSS Modules は自前で用意するか npm の
 ### CSS-in-JS の書き味
 
 私は Vue.js からフロントエンドに足を踏み入れたので、Vue.js の SFC / ScopedCSS に近い印象を受けた。
-Vue.js から React.js へ移行する方は、CSS-in-JS のライブラリを選ぶと移行しやすいかも。
+
+Vue.js から React.js へ移行する方は、CSS-in-JS が使えるライブラリを選ぶと移行しやすいかも。
 
 ### Emotion の記法に関して
 
@@ -63,3 +64,8 @@ const footer = css`
   }
 `;
 ```
+
+### CSS Modules が css-loader で deprecated となっている
+
+小規模なら CSS Modules を使っても問題無いのでは? と思っていたのですが、掲題の通り今後 Webpack の css-loader でのサポートが怪しい模様です。  
+https://github.com/webpack-contrib/css-loader/issues/1050
