@@ -1,13 +1,13 @@
 # Gatsby ts + Emotion sandbox
 
-TypeScript + Emotion を導入、スタイルは css Prop に String Styles を渡す方法を選択した。  
+TypeScript + Emotion を導入、スタイルは css Prop に String Styles を渡す方法を選択しました。  
 https://emotion.sh/docs/css-prop#string-styles
 
 ## Netlify にデプロイ
 
 GitHub / GitLab 等と連携するだけでデプロイ可能だが、  
-Netlify 側の環境変数で Node.js のバージョンを指定する必要がある。  
-今回は下記の環境変数を設定した。
+Netlify 側の環境変数で Node.js のバージョンを指定する必要があります。  
+今回は下記の環境変数を設定しました。
 
 ```
 key: NODE_VERSION
@@ -21,14 +21,14 @@ value: v14.15.1
 ### 環境構築時
 
 CSS Modules は Gatsby で最初からサポートされているので、新たなパッケージの導入などが不要。  
-Emotion は最初からサポートされているわけではないが、Gatsby CLI でプロジェクトを作成する際にインストールするか尋ねられるので導入は簡単。
+Emotion は最初からサポートされているわけではないが、Gatsby CLI でプロジェクトを作成する際にインストールするか尋ねられるので導入は簡単です。
 
-TS の型定義に関しては、CSS Modules は自前で用意するか npm のパッケージ or Gatsby Plugin をインストールする必要があった。  
+TS の型定義に関しては、CSS Modules は自前で用意するか npm のパッケージ or Gatsby Plugin をインストールする必要がありました。  
 対して Emotion はデフォで用意されているので楽でした。
 
 ### CSS-in-JS の書き味
 
-私は Vue.js からフロントエンドに足を踏み入れたので、Vue.js の SFC / ScopedCSS に近い印象を受けた。  
+私は Vue.js からフロントエンドに足を踏み入れたので、Vue.js の SFC / ScopedCSS に近い印象を受けました。  
 Vue.js から React.js へ移行する方は、CSS-in-JS が使えるライブラリを選ぶと移行しやすいかも。
 
 ### Emotion の記法に関して
