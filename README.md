@@ -5,6 +5,8 @@ https://emotion.sh/docs/css-prop#string-styles
 
 ## Netlify にデプロイ
 
+https://flamboyant-roentgen-8c4594.netlify.app/
+
 GitHub / GitLab 等と連携するだけでデプロイ可能だが、  
 Netlify 側の環境変数で Node.js のバージョンを指定する必要があります。  
 今回は下記の環境変数を設定しました。
